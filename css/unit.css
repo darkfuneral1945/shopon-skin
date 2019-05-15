@@ -1,0 +1,55 @@
+.container{
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+.viewport{
+    position: relative;
+}
+.buttons-nav button{
+    width: 40px;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    transition: color 0.5s, background-color 0.5s;
+}
+.buttons-nav .prev{
+    left: 0;
+    text-align: left;
+    padding-left: 10px;
+}
+.buttons-nav .next{
+    right: 0;
+    text-align: right;    
+    padding-right: 10px;
+}
+.buttons-nav button:hover{
+    background: rgba(0,0,0,0.9);
+    color: tomato;
+}
+.bullet-nav{
+    position: absolute;
+    bottom: 20px; left: 30px;
+}
+.bullet-nav button{
+    width: 22px; height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    border: 0;
+    border-radius: 100%;
+    background: rgba(100,100,100,0.45);
+    margin-right: 10px;
+}
+.bullet-nav button:hover:not(.on){
+    background: black;
+    color: white;
+}
+.bullet-nav button.on{
+    background: red;
+    font-weight: bold;
+}
