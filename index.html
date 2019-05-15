@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#title').click(function(){
+                $('.wrap').slideToggle();
+            });
+            $('.draft-list li').click(function(){
+                var imgUrl = $(this).attr('data-title');
+                $('.draft img').attr('src', imgUrl); 
+            });
+        });
+    </script>
+
+    <title>Draft</title>
 </head>
 <body>
-    <h1>Github test!!</h1>
+    <article role="article">
+        <h3 id="title">Work Index</h3>
+        <div class="wrap">
+            <ul class="draft-list" role="menu">
+				<li data-title="./images/ats_ver5.jpg">ATS소개_ver2</li>
+				<li data-title="./images/ats-mobile_ver5.png">ATS모바일_ver2</li>
+				<li data-title="./images/ats_ver2.jpg">ATS소개</li>
+				<li data-title="./images/ats-mobile.png">ATS모바일</li>
+				<li data-title="./images/shopon_session.jpg">샵온설명회</li>
+                <li data-title="./images/shopon_session_mobile.png">샵온설명회-모바일</li>
+				<li data-title="./images/mobile-home.png">모바일 홈</li>
+            </ul>
+        </div>
+    </article>
+    <main role="main">
+        <div class="draft"><img src=""></div>
+    </main>
+    <footer></footer>
 </body>
 </html>
